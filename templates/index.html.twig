@@ -5,6 +5,9 @@
 
 
 {% block body %}
-	<h1 class="text-primary">Bienvenue !</h1>
-	<img src="{{ asset('build/images/th7.webp') }}" alt="the 100"/>
+	<div>
+		<h1 class="text-primary">Bienvenue !</h1>
+		<img src="{{ asset('build/images/th7.webp') }}" alt="the 100"/>
+	</div>
+	<a href="{{ path("program_index") }}">liste des séries</a>
 {% endblock %}

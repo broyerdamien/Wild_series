@@ -5,10 +5,17 @@
 
 
 {% block body %}
+	<div class="media">
+		<img class="align-self-start mr-3" src="{{ program.poster }}" alt="{{ program.title }} poster"/>
+		<div class="media-body">
+			<h1 class="mt-0 text-primary">{{ program.title}}</h1>
+			<p>{{ program.synopsis }}</p>
+			<p>Catégorie :
+				{{ program.category.name }}</p>
+		</div>
+	</div>
 
-	<h1 class="text-primary">program
-		{{ id }}
-	</h1>
-	<img src="{{ asset('build/images/buffyfaith.webp') }}" alt="buffy and faith"/>
+	<a href="{{ path('program_index') }}">Retour à la liste des séries</a>
 
 {% endblock %}
+{# src="{{ asset('build/images/buffyfaith.webp') }}" #}
