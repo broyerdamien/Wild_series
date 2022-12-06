@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Show serie
+{% block title %}Show One serie
 {% endblock %}
 
 
@@ -12,16 +12,21 @@
 			<p>{{ program.synopsis }}</p>
 			<p>Catégorie :
 				{{ program.category.name }}</p>
+			<h2>{{ season.description }}
+				-
+				{{ season.year }}</h2>
+			<p>Liste des épisodes :</p>
 			<p>
-				{% for season in seasons %}
-					<li>
-						<a href="{{ path("program_season_show", {programId: program.id, seasonId: season.id}) }} ">
-							{{ season.description }}
-						</a>
-					</li>
+				{% for episod in episodes %}
+					<li>Episode
+						{{ episod.number}}
+						-
+						{{ episod.title }}</li>
 				{% endfor %}
 			</p>
-		</p>
+
+		</div>
+		<a href="{{ path("program_show", { id: program.id }) }}">Retour à la carte de la série</a>
 	</div>
-	<a href="{{ path('program_index') }}">Retour à la liste des séries</a>
-</div>{% endblock %}
+
+{% endblock %}

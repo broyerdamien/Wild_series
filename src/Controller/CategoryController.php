@@ -28,25 +28,19 @@ class CategoryController extends AbstractController
             ['name' => $categoryName]
         );
 
-        // var_dump($categories);
-        // die();
-
         if (!$categories) {
             throw $this->createNotFoundException(
                 'No category : ' . $categoryName . ' found in category\'s table.'
             );
         }
 
-        $category_id = $categories[0]->getId("id");
+        $category_id = $categories[0]->getId();
 
         $programInCategories = $programRepository->findBy(
             ['category' => $category_id],
             ['id' => 'DESC'],
             3
         );
-        // var_dump($programInCategory);
-        // die();
-
 
         return $this->render('category/show.html.twig', [
             'categories' => $categories,

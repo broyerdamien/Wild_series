@@ -53,12 +53,19 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
         $program5->setCategory($this->getReference('category_Drame'));
         $manager->persist($program5);
 
-        $program5 = new Program();
-        $program5->setTitle('Peaky Blinders');
-        $program5->setSynopsis('En 1919, la révolte gronde dans le Birmingham de l\'après-Guerre. Les "Peaky Blinders", dont plusieurs membres sont issus de la famille Shelby, comptent parmi les éléments les plus dangereux. Campbell, un impitoyable chef de la police débarqué de Belfast, a pour mission de nettoyer la ville.');
-        $program5->setPoster('https://fr.web.img6.acsta.net/c_310_420/pictures/22/06/07/11/57/5231272.jpg');
-        $program5->setCategory($this->getReference('category_Drame'));
-        $manager->persist($program5);
+        $program6 = new Program();
+        $program6->setTitle('Peaky Blinders');
+        $program6->setSynopsis('En 1919, la révolte gronde dans le Birmingham de l\'après-Guerre. Les "Peaky Blinders", dont plusieurs membres sont issus de la famille Shelby, comptent parmi les éléments les plus dangereux. Campbell, un impitoyable chef de la police débarqué de Belfast, a pour mission de nettoyer la ville.');
+        $program6->setPoster('https://fr.web.img6.acsta.net/c_310_420/pictures/22/06/07/11/57/5231272.jpg');
+        $program6->setCategory($this->getReference('category_Drame'));
+        $manager->persist($program6);
+
+        $program7 = new Program();
+        $program7->setTitle('The Big Bang Theory');
+        $program7->setSynopsis('Leonard Hofstadter et Sheldon Cooper vivent en colocation à Pasadena, ville de l\'agglomération de Los Angeles. Ce sont tous deux des physiciens surdoués, « geeks » de surcroît. C\'est d\'ailleurs autour de cela qu\'est axée la majeure partie comique de la série. Ils partagent quasiment tout leur temps libre avec leurs deux amis Howard Wolowitz et Rajesh Koothrappali pour jouer à des jeux vidéo comme Halo, organiser un marathon de la saga Star Wars, jouer à des jeux de société comme le Boggle klingon ou de rôles tel que Donjons et Dragons, voire discuter de théories scientifiques très complexes.Leur univers routinier est perturbé lorsqu\'une jeune femme, Penny, s\'installe dans l\'appartement d\'en face. Leonard a immédiatement des vues sur elle et va tout faire pour la séduire ainsi que l\'intégrer au groupe et à son univers, auquel elle ne connaît rien.');
+        $program7->setPoster('https://s2.qwant.com/thumbr/474x266/c/c/e0e96a5f1607903755736fe5e3e1a32a10d9666f2197b581d82ca9fc565b2d/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.DBte2btJu0ylEyfOc1GS5QFNC7%26pid%3DApi&q=0&b=1&p=0&a=0');
+        $program7->setCategory($this->getReference('category_Comédie'));
+        $manager->persist($program7);
 
         $manager->flush();
     }
